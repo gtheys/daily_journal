@@ -1,0 +1,27 @@
+{
+  "name": "daily_journal",
+  "version": "1.0.0",
+  "description": "Keep a daily journal. Using Day One JSON format.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gtheys/daily_journal.git"
+  },
+  "keywords": [
+    "Journal",
+    "NodeJS",
+    "ExpressJS"
+  ],
+  "author": "Geert Theys <geert.theys@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gtheys/daily_journal/issues"
+  },
+  "homepage": "https://github.com/gtheys/daily_journal#readme",
+  "dependencies": {
+    "express": "4.16.3"
+  }
+}
