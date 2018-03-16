@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #[em Journal Entries], POC to read day one journal exports and learn some JS
+
+  h1 Dynamic content
+
+  if error
+    p Error getting dynamic content.
+  else
+    p How many Entries are there in the export
+
+    ul
+      li #[strong Entries:] !{message}
+    
