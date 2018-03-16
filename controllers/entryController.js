@@ -1,6 +1,9 @@
-//const Entry = require('../models/entry');
+let  Entries = require('../models/entries');
 
 // Display all Entries
 exports.entry_list  = function (req, res) {
-    res.send('NOT IMPLEMENTED: Entry list')
+
+   res.send(Entries.entries());
+
 };
+
