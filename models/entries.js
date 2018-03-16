@@ -2,5 +2,5 @@
 
 
 exports.entries = function() {
-    return "hello";
+    return 'hello';
 };
