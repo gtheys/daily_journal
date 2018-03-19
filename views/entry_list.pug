@@ -12,5 +12,6 @@ block content
     p How many Entries are there in the export
 
     ul
-      li #[strong Entries:] !{message}
+    each entries in message
+      li !{entries.text}
     
