@@ -4,6 +4,6 @@ const fs = require('fs');
 let rawdata = fs.readFileSync('./data/mixed.json');
 let obj = JSON.parse(rawdata);
 
-exports.entries = function() { 
+exports.entries = function() {
     return obj;
 };

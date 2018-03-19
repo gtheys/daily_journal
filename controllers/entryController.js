@@ -2,7 +2,8 @@ let Entries = require('../models/entries');
 
 // Display all Entries
 exports.entry_list = function(req, res) {
-    res.render('entry_list', { title: 'Entries', message: Entries.entries().entries });
+    res.render('entry_list',
+        {title: 'Entries', message: Entries.entries().entries});
 };
 
 // Display detail page for a specific Entry.
