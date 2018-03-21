@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1=title
+
+  form(method='POST' action='')
+    div.form-group
+      label(for='text') text:
+      input#text.form-control(type='text', placeholder='Text  (Nlah Blah) last' name='text' required='true' value=(undefined===entry ? '' : entry
+      ) )
+    button.btn.btn-primary(type='submit') Submit
+  if errors 
+    ul
+      for error in errors
+        li!= error.msg

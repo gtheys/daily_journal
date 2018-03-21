@@ -7,3 +7,7 @@ let obj = JSON.parse(rawdata);
 exports.entries = function() {
     return obj;
 };
+
+exports.save = function(text) {
+    console.log('SAVE: ' + text);
+};
