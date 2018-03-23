@@ -39,8 +39,12 @@ exports.entry_create_post = [
             {title: 'Create Entry', entry: req.body, errors: errors.array()});
             return;
         } else {
-            Entries.save(req.body.text);
-            res.redirect('/journal');
+                Entries.save(req.body.text, function(err) {
+                    if (err) {
+                        return next(err);
+                    }
+                res.redirect('/journal');
+               });
         }
     },
 ];
