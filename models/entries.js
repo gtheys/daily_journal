@@ -1,4 +1,6 @@
 const fs = require('fs');
+const uuidv4 = require('uuid/v4');
+
 
 // Block for synchronius reading
 let rawdata = fs.readFileSync('./data/mixed.json');
@@ -9,7 +11,8 @@ exports.entries = function() {
 };
 
 exports.save = function(text, callback) {
-    let entry = {'text': text};
+    let uuid = uuidv4();
+    let entry = {'text': text, 'uuid': uuid.replace(/-/g, '').toUpperCase()};
     obj.entries.push(entry);
     let dump = JSON.stringify(obj, null, 4);
 

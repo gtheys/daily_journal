@@ -48,4 +48,3 @@ exports.entry_create_post = [
         }
     },
 ];
-
