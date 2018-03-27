@@ -14,9 +14,9 @@ block content
   div
   table#entrytable.ui.celled.padded.table
     thead
-      tr: th Entries
+      tr: th(colspan="2") Entries
     tbody
       each entries in message
         tr
           td #{entries.text}
-    
+          td #{entries.creationDate}
