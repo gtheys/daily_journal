@@ -1,6 +1,6 @@
 const fs = require('fs');
 const uuidv4 = require('uuid/v4');
-
+const moment = require('moment');
 
 // Block for synchronius reading
 let rawdata = fs.readFileSync('./data/mixed.json');
@@ -12,7 +12,8 @@ exports.entries = function() {
 
 exports.save = function(text, callback) {
     let uuid = uuidv4();
-    let entry = {'text': text, 'uuid': uuid.replace(/-/g, '').toUpperCase()};
+    let creationDate = moment().utc('Z').format(); 
+    let entry = {'text': text, 'uuid': uuid.replace(/-/g, '').toUpperCase(), 'creationDate': creationDate};
     obj.entries.push(entry);
     let dump = JSON.stringify(obj, null, 4);
 
