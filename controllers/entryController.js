@@ -48,3 +48,8 @@ exports.entry_create_post = [
         }
     },
 ];
+
+// Upload image
+exports.entry_image_add = function(req, res) {
+    res.send('file upload succeed');
+};
