@@ -1,4 +1,5 @@
 const express = require('express');
+const uuidv4 = require('uuid/v4');
 let router = express.Router();
 
 // multer object creation
@@ -8,8 +9,9 @@ const storage = multer.diskStorage({
         cb(null, 'uploads/');
     },
     filename: function(req, file, cb) {
-        cb(null, file.originalname);
-  },
+        let newFileName = uuidv4().replace(/-/g, '').toLowerCase();
+        cb(null, newFileName +'.jpeg');
+  }, 
 });
 
 let upload = multer({storage: storage});
