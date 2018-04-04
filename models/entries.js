@@ -13,7 +13,12 @@ exports.entries = function() {
 exports.save = function(text, callback) {
     let uuid = uuidv4();
     let creationDate = moment().utc('Z').format();
-    let entry = {'text': text, 'uuid': uuid.replace(/-/g, '').toUpperCase(), 'creationDate': creationDate};
+    let entry = {
+        'text': text,
+        'uuid': uuid.replace(/-/g,
+            '').toUpperCase(),
+        'creationDate': creationDate,
+    };
     obj.entries.push(entry);
     let dump = JSON.stringify(obj, null, 4);
 
