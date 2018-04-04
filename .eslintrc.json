@@ -5,6 +5,15 @@
         "ecmaVersion": 6
       },
     "rules" : {
-        "new-cap": [2, { "capIsNewExceptions": ["Router"] }]
+        "new-cap": [2, { "capIsNewExceptions": ["Router"] }],
+        "require-jsdoc": [2, {
+            "require": {
+                "FunctionDeclaration": false,
+                "MethodDefinition": false,
+                "ClassDeclaration": false,
+                "ArrowFunctionExpression": false,
+                "FunctionExpression": false
+            }
+        }]
     }
 }
