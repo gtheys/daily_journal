@@ -3,10 +3,13 @@ extends layout
 block content
   h1=title
 
-  #error.ui.negative.message
-    i.close.icon
-    #header Oeps.
-      #message  
+  #error
+    .ui.negative.message
+      i.close.icon
+      .header
+        OEPS something went wrong.
+      p
+        #message
 
   .ui.five.column.centered.grid
     .column Date

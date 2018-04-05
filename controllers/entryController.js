@@ -51,5 +51,6 @@ exports.entry_create_post = [
 
 // Upload image
 exports.entry_image_add = function(req, res) {
+    console.log('FUCK', req.file);
     res.send('file upload succeed');
 };
