@@ -9,15 +9,22 @@ block content
       .header
         OEPS something went wrong.
       p
-        #message
+        #error-message
 
   .ui.five.column.centered.grid
     .column Date
     .column Location
     .column
-       form(method='post', enctype='multipart/form-data' action='/journal/entry/image/add')
-        input(type='file', name='imageupload')
-        input(type='submit', name='uploadimage', value='Upload Image')
+    
+      form(id='uploadimage', method='post', enctype='multipart/form-data')
+        #image_preview
+        #selectimage
+          label Select image
+          input(id='file', type='file', name='imageupload', required)
+          input(type='submit', name='uploadimage', value='Upload Image')
+          h4#loading loading...
+          #message
+          
     .column Delete
     .column Star 
   
