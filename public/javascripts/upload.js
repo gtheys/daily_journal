@@ -1,5 +1,7 @@
 $(document).ready(function(e) {
   $('#error').hide();
+  $('#loading').hide();
+  $('#previewing').hide();
   $('#uploadimage').on('submit', function(e) {
     e.preventDefault();
     $('#message').empty();
@@ -34,7 +36,6 @@ $(document).ready(function(e) {
           imagefile == match[2]
         )
       ) {
-        $('#previewing').attr('src', 'noimage.png');
         $('#message').html(
           '<p id=\'error\'>Please Select A valid Image File</p>' +
             '<h4>Note</h4>' +
@@ -42,8 +43,20 @@ $(document).ready(function(e) {
         );
         return false;
       } else {
-        // Show the preview image
+        let reader = new FileReader();
+        reader.onload = imageIsLoaded;
+        reader.readAsDataURL(this.files[0]);
       }
     });
   });
+  
+  function imageIsLoaded(e) {
+    $('#previewing').show();
+    $('#noimage').hide();
+    $('#file').css('color', 'green');
+    $('#image_preview').css('display', 'block');
+    $('#previewing').attr('src', e.target.result);
+    $('#previewing').attr('width', '250px');
+    $('#previewing').attr('height', '230px');
+  }
 });

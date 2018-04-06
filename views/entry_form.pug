@@ -18,11 +18,15 @@ block content
     
       form(id='uploadimage', method='post', enctype='multipart/form-data')
         #image_preview
+          i#noimage.far.fa-image.falg(style='font-size:48px;')
+          img#previewing(src='noimage.png')
+            
         #selectimage
           label Select image
           input(id='file', type='file', name='imageupload', required)
           input(type='submit', name='uploadimage', value='Upload Image')
-          h4#loading loading...
+          #loading 
+            h4 loading...
           #message
           
     .column Delete
