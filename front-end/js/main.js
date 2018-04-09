@@ -1,3 +1,5 @@
+var test = "BLAH";
+
 $(document).ready(function(e) {
   $('#error').hide();
   $('#loading').hide();
@@ -17,9 +19,9 @@ $(document).ready(function(e) {
         data,
       ) {
         $('#loading').hide();
-        $('#message').html(data);
+        $('#message').html(data)
       },
-    });
+    })
   });
 
   // Function to preview image after validation
