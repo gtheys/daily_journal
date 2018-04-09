@@ -1,5 +1,3 @@
-var test = "BLAH";
-
 $(document).ready(function(e) {
   $('#error').hide();
   $('#loading').hide();
