@@ -9,9 +9,6 @@ export default {
     format: 'iife',
     sourceMap: 'inline',
     plugins: [
-      eslint({
-        throwOnError: true,
-      }),
       babel({
         exclude: 'node_modules/**',
       }),
