@@ -17,13 +17,12 @@ $(document).ready(function(e) {
         data,
       ) {
         $('#loading').hide();
-        $('#message').html(data)
+        $('#message').html(data);
       },
-    })
+    });
   });
 
   // Function to preview image after validation
-  $(function() {
     $('#file').change(function() {
       $('#message').empty(); // To remove the previous error message
       let file = this.files[0];
@@ -48,7 +47,6 @@ $(document).ready(function(e) {
         reader.readAsDataURL(this.files[0]);
       }
     });
-  });
   
   function imageIsLoaded(e) {
     $('#previewing').show();
