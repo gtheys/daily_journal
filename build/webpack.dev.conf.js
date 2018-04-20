@@ -44,6 +44,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
       poll: config.dev.poll,
     }
   },
+  resolve: {
+    extensions: [".js", ".json"]
+        extensions: [
+  },
   plugins: [
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')

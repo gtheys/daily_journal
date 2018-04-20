@@ -5,11 +5,13 @@ import Vuelidate from 'vuelidate';
 import Vuetify from 'vuetify';
 import 'material-design-icons/iconfont/material-icons.css';
 import 'vuetify/dist/vuetify.css';
+import TreeView from 'vue-json-tree-view';
 import App from './App';
 import router from './router';
 
 Vue.use(Vuelidate);
 Vue.use(Vuetify);
+Vue.use(TreeView);
 
 Vue.config.productionTip = false;
 
