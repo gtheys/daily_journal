@@ -1,6 +1,6 @@
 // rollup.config.js
-
-import babel from 'rollup-plugin-babel';
+import resolve from 'rollup-plugin-node-resolve';
+import commonJS from 'rollup-plugin-commonjs';
 
 export default {
   input: 'front-end/js/main.js',
@@ -9,8 +9,9 @@ export default {
     format: 'iife',
     sourceMap: 'inline',
     plugins: [
-      babel({
-        exclude: 'node_modules/**',
+      resolve(),
+      commonJS({
+        include: 'node_modules/**',
       }),
     ],
   },
