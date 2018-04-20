@@ -1,7 +1,21 @@
 # daily_journal
- A journal for daily journalling. Easy to use with Day One JSON format.
 
+> Easy way if editing my Day One journal
 
-Didn't like the fact that Day One switched to a subscription format. In the end it's just a journal. So I'm going to rebuild the basics and see if I can add some personal features I'd like.
+## Build Setup
 
-JS got chosen because I hate it but after not using it for many years I don't remember why. Big chance there are improvements :)
+``` bash
+# install dependencies
+npm install
+
+# serve with hot reload at localhost:8080
+npm run dev
+
+# build for production with minification
+npm run build
+
+# build for production and view the bundle analyzer report
+npm run build --report
+```
+
+For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
