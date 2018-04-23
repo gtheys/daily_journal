@@ -1,10 +1,10 @@
 <template>
   <v-content>
-    <div>
-      <tree-view
-        :data="myJson"
-        :options="{maxDepth: 3}"/>
-    </div>
+    <li
+      v-for="entry in myJson.entries"
+      :key="entry.id">
+      {{ entry.text }}
+    </li>
   </v-content>
 </template>
 
