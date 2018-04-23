@@ -46,7 +46,6 @@ const devWebpackConfig = merge(baseWebpackConfig, {
   },
   resolve: {
     extensions: [".js", ".json"]
-        extensions: [
   },
   plugins: [
     new webpack.DefinePlugin({
