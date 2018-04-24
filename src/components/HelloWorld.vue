@@ -1,11 +1,14 @@
 <template>
-  <v-content>
-    <li
-      v-for="entry in myJson.entries"
-      :key="entry.id">
-      {{ entry.text }}
-    </li>
-  </v-content>
+  <v-app>
+    <v-content>
+      <v-container
+        v-for="entry in myJson.entries"
+        :key="entry.id"
+      >
+        {{ entry.text }}
+      </v-container>
+    </v-content>
+  </v-app>
 </template>
 
 <script>
