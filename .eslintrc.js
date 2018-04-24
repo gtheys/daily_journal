@@ -33,7 +33,14 @@ module.exports = {
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',
-      vue: 'never'
+      vue: 'never',
+    'vue/max-attributes-per-line': [2, {
+      'singleline': 5,
+      'multiline': {
+        'max': 1,
+        'allowFirstLine': false
+        }
+      }],
     }],
     // disallow reassignment of function parameters
     // disallow parameter object manipulation except for specific exclusions
