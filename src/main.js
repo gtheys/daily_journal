@@ -3,7 +3,6 @@
 import Vue from 'vue';
 import Vuelidate from 'vuelidate';
 import Vuetify from 'vuetify';
-import 'material-design-icons/iconfont/material-icons.css';
 import 'vuetify/dist/vuetify.css';
 import TreeView from 'vue-json-tree-view';
 import App from './App';
