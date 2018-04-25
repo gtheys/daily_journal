@@ -5,6 +5,7 @@
         v-for="entry in myJson.entries"
         :key="entry.id"
       >
+        <v-icon>mdi-anchor</v-icon>
         {{ entry.text }}
       </v-container>
     </v-content>
