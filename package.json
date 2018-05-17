@@ -12,6 +12,7 @@
   },
   "dependencies": {
     "axios": "0.18.0",
+    "mdi": "2.2.43",
     "npm": "^6.0.0",
     "vue": "^2.5.2",
     "vue-json-tree-view": "2.1.3",
